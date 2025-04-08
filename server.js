@@ -11,8 +11,8 @@ const userRoutes = require("./auth");
 
 const app = express(); 
 
-/*app.use("/api", userRoutes); 
-app.use(
+app.use("/api", userRoutes); 
+/*app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],

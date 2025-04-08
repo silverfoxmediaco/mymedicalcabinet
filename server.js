@@ -27,7 +27,7 @@ app.use("/api", userRoutes);
 
 
 // Models & Routes
-const User = require("./models/User");
+const User = require("./User");
 const medicationRoutes = require("./routes/medications");
 const physicianRoutes = require("./routes/physicians");
 const insuranceRoutes = require("./routes/insurance");

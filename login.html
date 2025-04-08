@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | MyMedicalCabinet</title>
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="responsive.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-main">
+        <div class="grid-container">
+        <div class="grid-logo">
+            <a href="index.html"><img class="logo" src="mymed100by50logo.png" alt="logo"></a>
+        </div>
+        <div class="grid-burger">
+            <nav>
+                <!-- Mobile Menu Start -->
+                <ul class="sidebar">
+                    <li onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="mydashboard.html">My Dashboard</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="become-a-member.html">Become a Member</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <!-- Mobile Menu End -->
+                <ul class="nav-list">
+                    <li class="menu-button" onclick="showSideBar()">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </header>
+    <section class="loginformwrapper">
+        <h1>Login to your Account</h1>
+        <form id="login-form">
+            <input type="username" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="login-error" style="color: red;"></p>
+
+    </section>
+    <script src="login.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 1rem 2rem;
+    }
+
+    .welcome-h2 {
+      font-size: 45px;
+      font-weight: 700;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .hero {
+      background-color: #e8f0fe;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 50px;
+      color: white;
+    }
+
+    .avatar-icon {
+        width: 40px;
+    }
+
+    .settings-icon {
+        width: 40px;
+    }
+  
+.dashboard-section {
+    padding: 40px;
+    width: 100%;
+}
+
+.dashboard-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.user-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.welcome-message {
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.user-profile .profile-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: #fff;
+    padding: 30px;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-right: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .profile-column {
+    font-size: 16px;
+    
+  }
+  
+  .profile-column h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+
+.data-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 30px;
+  }
+  
+  .data-cards div {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  h2 {
+    padding-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .data-entry-lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 30px;
+  }
+
+  .data-entry-lists > div {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  .data-list li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  .data-list button.edit-med,
+  .data-list button.edit-physician,
+  .data-list button.edit-history {
+    background: none;
+    border: black solid;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    cursor: pointer;
+  }
+
+  .data-list button img {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    transition: opacity 02s ease;
+  }
+
+  .data-list button img:hover {
+    opacity: 1;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .delete-button {
+    margin-top: 10px;
+  }
+
+  .autocomplete-suggestions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .autocomplete-suggestions li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .autocomplete-suggestions li:hover {
+    background-color: #f0f0f0;
+  }
+
+  #autcomplete-list {
+    list-style: none;
+  }
+  
+  input[type="text"][id$="phone"] {
+    width: 180px;
+  }
+
+  .data-list button.edit-insurance {
+    background: none;
+    border: black solid;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    cursor: pointer;
+    padding: 2px;
+  }
+  
+  .data-list button img,
+.insurance-card-list button img {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.insurance-card-list button.edit-insurance {
+  background: none;
+  border: black solid;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.modal-hidden {
+  display: none;
+}
+
+.edit-profile-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: black solid;
+  padding: 2px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.edit-profile-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+
+  @media (max-width: 900px) {
+    
+    .user-profile .profile-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      background: #fff;
+      padding: 30px;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      position: relative;
+    }
+    
+    .data-cards {
+      grid-template-columns: 1fr; /* stack vertically on small screens */
+    }
+
+    .data-entry-lists {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+    
+      .data-entry-lists > div {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .welcome-h2 {
+        font-size: 25px;
+      }
+
+  }
+
+
+  
+  
+  

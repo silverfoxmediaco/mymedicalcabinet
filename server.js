@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 //const helmet = require("helmet");
 const nodemailer = require("nodemailer");
-const userRoutes = require("./routes/user");
+const userRoutes = require("./routes/auth");
 
 const app = express(); 
 
@@ -48,16 +48,17 @@ app.use(session({
     cookie: {
       secure: false, // Set true if using https
       httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 2 // 2 hours
+      maxAge: 1000 * 60 * 60 * 2 
     }
   }));  
 app.use(express.json());
 // Protect specific static pages
+
 app.use((req, res, next) => {
   if (req.path === "/mydashboard.html" && !req.session.userId) {
     return res.redirect("/login.html");
   }
-  next();
+ next();
 });
 
 app.use(express.static("public")); // Serve HTML, CSS, JS, etc.
@@ -73,10 +74,12 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Email Transporter
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.mailgun.org",
+  port: 587,
+  secure: false,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
+    user: process.env.MAILGUN_SMTP_USER,
+    pass: process.env.MAILGUN_SMTP_PASS
   }
 });
 
@@ -111,10 +114,10 @@ app.post("/api/signup", async (req, res) => {
 });
 
 app.post("/api/login", async (req, res) => {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
   
     try {
-      const user = await User.findOne({ email });
+      const user = await User.findOne({ username });
   
       if (!user) return res.status(401).json({ message: "User not found." });
       if (!user.isVerified) return res.status(403).json({ message: "Email not verified." });

@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 //const helmet = require("helmet");
 const nodemailer = require("nodemailer");
-const userRoutes = require("./routes/auth");
+const userRoutes = require("./auth");
 
 const app = express(); 
 

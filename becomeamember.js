@@ -14,20 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const messageEl = document.getElementById("message");
 
         try {
-            const response = await fetch("http://localhost:3000/api/signup", {
+            const response = await fetch("/api/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, username, email, password })
             });
-            console.log("Sending signup:", { name, username, email, password });
 
             const result = await response.json();
             messageEl.textContent = result.message;
 
             if (response.ok) {
-                window.location.href = "/check-email.html";
+                // Optional: redirect to verify page or dashboard
+                // window.location.href = "/verify.html";
             }
-            
 
         } catch (error) {
             messageEl.textContent = "Error signing up!";

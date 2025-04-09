@@ -70,7 +70,11 @@
 
 }
 
-
+.grid-card1:hover {
+    color: black;
+    background-color: #d6d6d6;
+    transition: ease;
+}
 
 .grid-card2 {
     display: flex;
@@ -88,6 +92,12 @@
     max-height: 500px;
     min-height: 400px;
     
+}
+
+.grid-card2:hover {
+    color: grey;
+    background-color: #a9faaa;
+    transition: ease;
 }
 
 .grid-card3 {
@@ -108,6 +118,12 @@
     min-height: 400px;
     margin: 30px;
     gap: 10px;
+}
+
+.grid-card3:hover {
+    color: white;
+    background-color: #80d1fd;
+    
 }
 
 .grid-card-btn {
@@ -219,7 +235,7 @@ button:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 0px;
+    top: 60px;
     right: 0;
     background: white;
     width: 250px;
@@ -233,23 +249,6 @@ button:hover {
     display: block;
     cursor: pointer;
   }
-
-  /* Login verification button*/
-
-  .login-verification-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0077cc;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  .login-verification-button:hover {
-    background-color: #005fa3;
-  }
-  
   
 
 @media only screen and (max-width: 768px) {
@@ -263,7 +262,7 @@ button:hover {
         width: 100%;
         background-color: #017CFF;
         color: white;
-        min-height: 300px;
+        min-height: 400px;
         align-content: center;
         justify-items: center;
         text-align: center;

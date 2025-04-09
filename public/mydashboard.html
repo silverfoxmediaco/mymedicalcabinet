@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard | MyMedicalCabinet</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="mydashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header-main">
+    <div class="grid-container">
+      <div class="grid-logo">
+        <a href="index.html"><img class="logo" src="mymed100by50logo.png" alt="logo"></a>
+      </div>
+      <div class="grid-burger">
+        <nav>
+          <!-- Mobile Menu Start -->
+          <ul class="sidebar">
+            <li onclick="hideSideBar()">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                  <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+              </a>
+            </li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="mydashboard.html">My Dashboard</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="become-a-member.html">Become a Member</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <!-- Mobile Menu End -->
+        
+          <ul class="nav-list">
+            <li class="menu-button" onclick="showSideBar()">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                  <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        
+        
+      </div>
+    </div>
+  </header>
+<!--Hero Section begins-->
+  <section class="hero">
+    <h1>My Dashboard</h1>
+  </section>
+<!--Hero Section Ends-->
+
+<!--User Profile Section Begins-->
+  <section class="user-profile">
+    <div class="welcome-message">
+      <h2 class="welcome-h2">Welcome, James</h2>
+    </div>
+    <div class="profile-row">
+      <button class="edit-profile-btn" aria-label="Edit Profile">
+        <img src="edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Edit" />
+      </button>
+      <div class="profile-column">
+        <h3>Personal Info</h3>
+        <p><strong>Full Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> johndoe@email.com</p>
+      </div>
+  
+      <div class="profile-column">
+        <h3>Contact Details</h3>
+        <p><strong>Phone:</strong> (123) 456-7890</p>
+        <p><strong>Address:</strong> 123 Main St, Springfield, IL</p>
+        <p><strong>Emergency Contact Name:</strong> Jane Doe</p>
+        <p><strong>Emergency Contact Phone:</strong> (555) 555-5555</p>
+      </div>
+  
+      <div class="profile-column">
+        <h3>Vitals</h3>
+        <p><strong>Age:</strong> 32</p>
+        <p><strong>Height:</strong> 5'11"</p>
+        <p><strong>Weight:</strong> 180 lbs</p>
+        
+      </div>
+  
+    </div>
+    
+<!--User Profile Section Ends-->
+
+  <section class="data-entry-lists">
+    <div>
+        <h2>My Medications</h2>
+        <ul class="data-list" id="medications-list"></ul>
+    </div>
+    
+    <div>
+        <h2>My Doctors</h2>
+        <ul class="data-list" id="physicians-list"></ul>
+    </div>
+
+    <div>
+        <h2>My Health Insurance</h2>
+        <ul class="data-list" id="health-insurance"></ul>
+    </div>
+    
+    <div>
+        <h2>My Health History</h2>
+        <ul class="data-list" id="history-list"></ul>
+    </div>
+  </section>
+
+  <section class="data-cards">
+    <div class="mymedications">
+        <h2>Add new Medications</h2>
+        <form id="medication-form">
+            <input type="text" id="med-name" name="name" placeholder="Enter Medication" autocomplete="off" />
+            <ul id="med-suggestions" class="autocomplete-suggestions"></ul>
+            <input type="text" id="med-dosage" placeholder="Dosage (e.g. 10mg)" />
+            <input type="text" id="med-frequency" placeholder="Frequency (e.g. Once Daily)" />
+            <input type="text" id="med-pharmacy" placeholder="Pharmacist" />
+            <input type="text" id="med-notes" placeholder="Notes" />
+            <button type="submit">Add Medication</button>
+          </form>
+
+    </div>
+    <div class="myphysicians">
+        <form id="physician-form">
+            <h2>Add new Doctor</h2>
+            <input type="text" id="physician-name" placeholder="Name" required />
+            <input type="text" id="physician-specialty" placeholder="Specialty" />
+            <input type="number" id="physician-phone" placeholder="Phone" />
+            <input type="email" id="physician-email" placeholder="Email Address" />
+            <input type="text" id="physician-address" placeholder="Address" />
+            <input type="text" id="physician-notes" placeholder="Notes" />
+            <button type="submit">Add Physician</button>
+          </form>
+    </div>
+
+    <div class="myhealthinsurance">
+        <form id="health-insurance-form">
+            <h2>Add Health Insurance</h2>
+            <input type="text" id="insurance-company-name" placeholder="Company Name" required />
+            <input type="tel" id="insurance-company-phone" placeholder="Phone" />
+            <input type="email" id="insurance-company-email" placeholder="Email Address" />
+            <input type="text" id="insurance-company-address" placeholder="Address" />
+            <input type="text" id="insurance-company-notes" placeholder="Notes" />
+            <button type="submit">Add Health Insurance Company</button>
+          </form>
+    </div>
+
+    <div class="myhealthhistory">
+        <form id="history-form">
+            <h2>Add to Health History</h2>
+            <input type="text" id="history-type" placeholder="Type (e.g. Surgery, Condition)" required />
+            <input type="text" id="history-description" placeholder="Description" />
+            <input type="date" id="history-date" placeholder="Date" />
+            <button type="submit">Add Entry</button>
+          </form>
+    </div>
+
+
+  </section>
+
+  <!-- Medication Info Modal -->
+    <div id="medication-modal" class="modal hidden">
+            <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h3 id="modal-med-name">Medication Name</h3>
+            <p><strong>Dosage:</strong> <span id="modal-dosage"></span></p>
+            <p><strong>Frequency:</strong> <span id="modal-frequency"></span></p>
+            <p><strong>What it's for:</strong> <span id="modal-info"></span></p>
+            </div>
+    
+    </div>
+
+    <!--Profile edit Modal-->
+    <div id="edit-profile-modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close-edit-modal" class="close-btn" aria-label="Close" style="cursor: pointer;">&times;</span>
+        <h3>Edit Profile</h3>
+        <form id="edit-profile-form">
+          <input type="text" id="edit-profile-name" placeholder="Edit Name">
+          <input type="email" id="edit-profile-email" placeholder="Edit Email">
+          <input type="tel" id="edit-profile-phone" placeholder="Edit Phone">
+          <input type="text" id="edit-profile-address" placeholder="Edit Address">
+          <input type="number" id="edit-profile-age" placeholder="Edit Age">
+          <input type="number" id="edit-profile-height" placeholder="Edit Height">
+          <input type="number" id="edit-profile-weight" placeholder="Edit Weight">
+          <input type="text" id="edit-profile-emergency-contact" placeholder="Edit Emergency Contact">
+          <input type="tel" id="edit-profile-emergency-phone" placeholder="Edit Emergency Phone">
+          <button type="submit">Save Changes</button>
+          <button type="button" id="delete-record-btn" class="delete-button">Delete Record</button>
+        </form>
+      </div>
+
+    </div>
+    <!-- Edit medication Modal -->
+    <div id="edit-medication-modal" class="modal hidden">
+        <div class="modal-content">
+          <span style="cursor: pointer;" aria-label="Close edit modal" id="close-edit-modal" class="close">&times;</span>
+          <h3>Edit Medication</h3>
+          <form id="edit-medication-form">
+            <input type="text" id="edit-med-name" placeholder="Medication Name" required />
+            <input type="text" id="edit-med-dosage" placeholder="Dosage" />
+            <input type="text" id="edit-med-frequency" placeholder="Frequency" />
+            <input type="text" id="edit-med-pharmacy" placeholder="Pharmacy" />
+            <input type="text" id="edit-med-notes" placeholder="Notes" />
+            <button type="submit">Save Changes</button>
+            <button type="button" id="delete-record-btn" class="delete-button">Delete Record</button>
+            
+          </form>
+        </div>
+      </div>
+  
+        
+<!-- Edit Physician Modal -->
+<div id="edit-physician-modal" class="modal hidden">
+  <div class="modal-content">
+    <span style="cursor: pointer;" id="close-edit-physician-modal" class="close">&times;</span>
+    <h3>Edit Physician</h3>
+    <form id="edit-physician-form">
+      <input type="text" id="edit-physician-name" placeholder="Name" required />
+      <input type="text" id="edit-physician-specialty" placeholder="Specialty" />
+      <input type="text" id="edit-physician-phone" placeholder="Phone" />
+      <input type="email" id="edit-physician-email" placeholder="Email" />
+      <input type="text" id="edit-physician-address" placeholder="Address" />
+      <input type="text" id="edit-physician-notes" placeholder="Notes" />
+      <button type="submit">Save Changes</button>
+      <button type="button" id="delete-physician-btn" class="delete-button">Delete Record</button>
+    </form>
+  </div>
+</div>
+
+<!-- Edit Health Insurance Modal -->
+
+<div id="edit-insurance-modal" class="modal hidden">
+    <div class="modal-content">
+      <span style="cursor: pointer;" id="close-edit-insurance-modal" class="close">&times;</span>
+      <h3>Edit Health Insurance</h3>
+      <form id="edit-health-insurance-form">
+        <input type="text" id="edit-insurance-company-name" placeholder="Name" required />
+        <input type="text" id="edit-insurance-company-phone" placeholder="Phone" />
+        <input type="email" id="edit-insurance-company-email" placeholder="Email" />
+        <input type="text" id="edit-insurance-company-address" placeholder="Address" />
+        <input type="text" id="edit-insurance-company-notes" placeholder="Notes" />
+        <button type="submit">Save Changes</button>
+        <button type="button" id="delete-insurance-btn" class="delete-button">Delete Record</button>
+      </form>
+    </div>
+  </div>
+
+<!-- Edit History Modal -->
+<div id="edit-history-modal" class="modal hidden">
+  <div class="modal-content">
+    <span style="cursor: pointer;" id="close-edit-history-modal" class="close">&times;</span>
+    <h3>Edit Health History</h3>
+    <form id="edit-history-form">
+      <input type="text" id="edit-history-type" placeholder="Type" required />
+      <input type="text" id="edit-history-description" placeholder="Description" />
+      <input type="date" id="edit-history-date" placeholder="Date" />
+      <button type="submit">Save Changes</button>
+      <button type="button" id="delete-history-btn" class="delete-button">Delete Record</button>
+    </form>
+  </div>
+</div>
+
+<script src="mydashboard.js"></script>
+<script>
+  function showSideBar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'flex';
+  }
+
+  function hideSideBar() {
+      sidebar.style.display = 'none';
+  }
+  </script>
+</body>
+</html>

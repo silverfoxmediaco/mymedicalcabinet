@@ -286,6 +286,43 @@ document.getElementById("physician-form").addEventListener("submit", async (e) =
   form.removeAttribute("data-editing-id");
 });
 
+//health history
+window.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("history-form");
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const type = document.getElementById("history-type").value;
+    const description = document.getElementById("history-description").value;
+    const date = document.getElementById("history-date").value;
+
+    try {
+      const res = await fetch(`${API_BASE}/api/health-history`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type, description, date }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        renderHistory(data.history);
+        form.reset();
+      } else {
+        alert(data.message || "Failed to save health history.");
+      }
+    } catch (err) {
+      console.error("Error saving health history:", err);
+      alert("An error occurred.");
+    }
+  });
+});
+
+
+
+
+
 // My Health Insurance
 
 document.getElementById("health-insurance-form").addEventListener("submit", async (e) => {
@@ -751,6 +788,28 @@ document.getElementById("close-edit-modal").addEventListener("click", () => {
       document.getElementById("edit-history-modal").classList.add("hidden");
     }
   });
+
+  window.addEventListener("DOMContentLoaded", async () => {
+    try {
+      // Fetch profile data
+      const profileRes = await fetch(`${API_BASE}/api/profile`);
+      const user = await profileRes.json();
+  
+      // Update DOM with user data
+      document.getElementById("full-name").textContent = user.name || "";
+      document.getElementById("email").textContent = user.email || "";
+      document.getElementById("phone").textContent = user.phone || "";
+      document.getElementById("address").textContent = user.address || "";
+      document.getElementById("emergency-contact").textContent = user.emergencyContact || "";
+      document.getElementById("emergency-phone").textContent = user.emergencyPhone || "";
+      document.getElementById("age").textContent = user.age || "";
+      document.getElementById("height").textContent = user.height || "";
+      document.getElementById("weight").textContent = user.weight || "";
+    } catch (err) {
+      console.error("Failed to load profile data:", err);
+    }
+  });
+  
   
   // DRUG AUTOCOMPLETE LOGIC
 

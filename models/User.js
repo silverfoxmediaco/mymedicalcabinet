@@ -12,7 +12,8 @@ const userSchema = new mongoose.Schema({
   age: Number,
   height: String,
   weight: String,
-  emergencyContact: String
+  emergencyContact: String,
+  emergencyPhone: String
 });
 
 module.exports = mongoose.model("User", userSchema);

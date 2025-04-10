@@ -292,9 +292,9 @@ button:hover {
     display: none;
 }
 
-.burger-menu-btn {
+/*.burger-menu-btn {
     display: none;
-}
+}*/
 
 .burger-menu.open {
     display: block;

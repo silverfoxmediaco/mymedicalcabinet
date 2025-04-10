@@ -292,12 +292,14 @@ button:hover {
     display: none;
 }
 
-/*.burger-menu-btn {
-    display: none;
-}*/
+.burger-menu-btn {
+    width: 20px;
+    height: 20px
+}
 
 .burger-menu.open {
     display: block;
+    
 }
 
 @media only screen and (max-width: 468px) {

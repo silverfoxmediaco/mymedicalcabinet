@@ -1,14 +1,14 @@
 // public / login.js
 
 document.getElementById("login-form").addEventListener("submit", async (e) => {e.preventDefault();
-    const email = document.getElementById("email").ariaValueMax.trim();
-    const password = document.getElementById("password").ariaValueMax.trim();
+    const email = document.getElementById("email").aValue.trim();
+    const password = document.getElementById("password").Value.trim();
     const errorMsg = document.getElementById("login-error");
 
     try {
         const res = await fetch("http://localhost:3000/api/login", {
             method: "POST",
-            header: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password})
         });
 

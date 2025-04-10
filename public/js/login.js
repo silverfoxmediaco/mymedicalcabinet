@@ -1,7 +1,7 @@
 // public / login.js
 
 document.getElementById("login-form").addEventListener("submit", async (e) => {e.preventDefault();
-    const email = document.getElementById("email").aValue.trim();
+    const email = document.getElementById("email").Value.trim();
     const password = document.getElementById("password").Value.trim();
     const errorMsg = document.getElementById("login-error");
 

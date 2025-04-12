@@ -16,7 +16,7 @@ function showSideBar() {
     const burgerBtn = document.querySelector(".burger-menu-btn");
     const closeBtn = document.querySelector(".sidebar-close-btn");
   
-    if (burgerBtn) {
+    if (burgerBtn && sidebar) {
       burgerBtn.addEventListener("click", (e) => {
         e.preventDefault();
         showSideBar();
@@ -25,7 +25,7 @@ function showSideBar() {
       console.warn("Burger button not found.");
     }
   
-    if (closeBtn) {
+    if (closeBtn && sidebar) {
       closeBtn.addEventListener("click", (e) => {
         e.preventDefault();
         hideSideBar();

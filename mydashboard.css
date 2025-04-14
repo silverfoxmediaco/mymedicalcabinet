@@ -288,6 +288,7 @@ height: 20px;
       .hero {
     background-color: #e8f0fe;
     text-align: center;
+    height: 200px;
   }
   .hero h1 {
     margin: 0;

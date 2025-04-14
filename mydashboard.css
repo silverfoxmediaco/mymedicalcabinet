@@ -33,9 +33,9 @@ body {
     color: #333;
     font-weight: 500;
   }
+
   .hero {
     background-color: #e8f0fe;
-    padding: 60px 20px;
     text-align: center;
   }
   .hero h1 {
@@ -285,7 +285,16 @@ height: 20px;
 
 @media (max-width: 900px) {
 
-
+      .hero {
+    background-color: #e8f0fe;
+    text-align: center;
+  }
+  .hero h1 {
+    margin: 0;
+    font-size: 25px;
+    color: white;
+  }
+    
     .user-profile .profile-row {
       display: grid;
       grid-template-columns: 1fr;

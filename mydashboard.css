@@ -284,20 +284,7 @@ height: 20px;
 }
 
 @media (max-width: 900px) {
-  .data-cards {
-    grid-template-columns: 1fr; /* stack vertically on small screens */
-  }
 
-  .data-entry-lists {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-  
-    .data-entry-lists > div {
-      width: 100%;
-    }
 
     .user-profile .profile-row {
       display: grid;
@@ -312,6 +299,26 @@ height: 20px;
       border-radius: 8px;
       position: relative;
     }
+
+    .data-entry-lists {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .data-entry-lists > div {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 80%
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .data-cards {
+    grid-template-columns: 1fr; /* stack vertically on small screens */
+  }
     
     .profile-column {
       font-size: 14px;

@@ -283,10 +283,6 @@ width: 20px;
 height: 20px;
 }
 
-
-
-
-
 @media (max-width: 900px) {
   .data-cards {
     grid-template-columns: 1fr; /* stack vertically on small screens */
@@ -301,6 +297,30 @@ height: 20px;
   
     .data-entry-lists > div {
       width: 100%;
+    }
+
+    .user-profile .profile-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      background: #fff;
+      padding: 10px;
+      margin-top: 20px;
+      margin-left: 35px;
+      margin-right: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      position: relative;
+    }
+    
+    .profile-column {
+      font-size: 14px;
+      
+    }
+    
+    .profile-column h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
     }
 
 }

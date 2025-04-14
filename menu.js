@@ -1,5 +1,3 @@
-//menu js
-
 // Show the sidebar menu
 function showSideBar() {
     const sidebar = document.querySelector('.sidebar');

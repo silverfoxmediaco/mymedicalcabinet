@@ -1,7 +1,5 @@
 // ======= RENDER FUNCTIONS =======
 
-// mydashboard js
-
 const API_BASE = "http://localhost:3000";
 
 function renderMedication(med) {

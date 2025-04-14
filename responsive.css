@@ -93,45 +93,15 @@ nav a:hover {
     width: 100%;
 }
 
-
-
-@media (max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menu-button {
-        display: flex; /* Show menu button on mobile */
-    }
-
-    .logo {
-        width: 100px; /* Adjust size for mobile */
-        margin-left: 10px;
-    }
-
-    .grid-container {
-        width: 100%;
-        grid-template-columns: 1fr 1fr; /* Keep 2 columns on mobile */
-        gap: 10px;
-    }
-
-    .grid-item1 {
-        margin-left: 10px;
-    }
-    
-    .grid-item2 {
-        margin-right: 10px;
-    }
-
-}
-
 @media (max-width: 400px) {
     .sidebar {
         width: 100%; /* Full width on very small screens */
     }
 
     .grid-container {
-        grid-template-columns: 1fr 1fr; /* Still 2 columns, adjust if needed */
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        
     }
 
     .grid-logo {
@@ -140,14 +110,6 @@ nav a:hover {
 
     .grid-burger {
         margin-right: 10px;
-    }
-
-    .grid-item1 {
-        margin-left: 5px;
-    }
-    
-    .grid-item2 {
-        margin-right: 5px;
     }
 
 }
@@ -209,4 +171,3 @@ nav a:hover {
   }
 
 }
-

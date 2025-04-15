@@ -76,6 +76,7 @@ app.get("/verify", (req, res) => {
   res.redirect(`/api/verify?token=${req.query.token}`);
 });
 
+
 // Fallback for SPA-style routing
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));

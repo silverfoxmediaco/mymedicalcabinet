@@ -13,7 +13,7 @@
 .hero {
     background: 
       linear-gradient(rgba(41, 43, 44, 0.644), rgba(47, 51, 54, 0.687)),
-      url('../images/nursesanddoctors.webp') no-repeat center center / cover;
+      url('nursesanddoctors.webp') no-repeat center center / cover;
     color: white;
     min-height: 400px;
     text-align: center;

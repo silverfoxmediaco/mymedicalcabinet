@@ -475,7 +475,7 @@ button:hover {
     }
 
     .mmchomescreenleft {
-        width: 300px;
+        width: 200px;
         padding-left: 20px;
         height: auto;
         margin: 0 auto;
@@ -543,7 +543,7 @@ button:hover {
 
     .mmchomescreenright {
         
-        width: 50%;
+        width: 200px;
         height: auto;
         
     }   

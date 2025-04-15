@@ -22,7 +22,11 @@ const PORT = 3000;
 
 //core middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://mymedicalcabinet.onrender.com",
+  credentials: true
+}));
+
 app.use(session({
   secret: process.env.SESSION_SECRET || "my-secret-key",
   resave: false,

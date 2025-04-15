@@ -1,6 +1,7 @@
 // ======= RENDER FUNCTIONS =======
 
-const API_BASE = "http://localhost:3000";
+const API_BASE = "https://your-backend-name.onrender.com";
+
 
 function renderMedication(med) {
   const list = document.getElementById("medications-list");

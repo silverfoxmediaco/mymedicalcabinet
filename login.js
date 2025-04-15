@@ -6,7 +6,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {e
     const errorMsg = document.getElementById("login-error");
 
     try {
-        const res = await fetch("http://localhost:3000/api/login", {
+        const res = await fetch("https://mymedicalcabinet.onrender.com/api/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password})

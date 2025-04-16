@@ -123,27 +123,10 @@ h2 {
   font-weight: 400;
 }
 
-.data-entry-lists,
-.data-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* one column per section */
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.data-entry-lists > div,
-.data-cards > div {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-
-/*.data-entry-lists {
+.data-entry-lists {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
- /* gap: 2rem;
+  gap: 2rem;
   margin-top: 2rem;
   padding: 30px;
 }
@@ -154,7 +137,7 @@ h2 {
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-}*/
+}
 
 .data-list li {
   list-style: none;

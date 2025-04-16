@@ -1,7 +1,6 @@
 // ======= RENDER FUNCTIONS =======
 
-const API_BASE = "https://your-backend-name.onrender.com";
-
+const API_BASE = "https://mymedicalcabinet.onrender.com";
 
 function renderMedication(med) {
   const list = document.getElementById("medications-list");
@@ -880,7 +879,40 @@ function formatPhoneInput(inputId) {
     formatPhoneInput("physician-phone");
     formatPhoneInput("edit-physician-phone");
   });*/
-  
 
-  
-  
+// Load and Display User Profile Data (Edit Modal + Dashboard)
+async function loadUserProfile() {
+  try {
+    const res = await fetch(`${API_BASE}/api/profile`);
+    if (!res.ok) throw new Error("Failed to load profile");
+    const user = await res.json();
+
+    // Populate Edit Modal Fields
+    document.getElementById("edit-profile-name").value = user.name || "";
+    document.getElementById("edit-profile-email").value = user.email || "";
+    document.getElementById("edit-profile-phone").value = user.phone || "";
+    document.getElementById("edit-profile-address").value = user.address || "";
+    document.getElementById("edit-profile-age").value = user.age || "";
+    document.getElementById("edit-profile-height").value = user.height || "";
+    document.getElementById("edit-profile-weight").value = user.weight || "";
+    document.getElementById("edit-profile-emergency-contact").value = user.emergencyContact || "";
+    document.getElementById("edit-profile-emergency-phone").value = user.emergencyPhone || "";
+
+    // Update Profile Display Section
+    document.getElementById("profile-name").textContent = user.name || "N/A";
+    document.getElementById("profile-email").textContent = user.email || "N/A";
+    document.getElementById("profile-phone").textContent = user.phone || "N/A";
+    document.getElementById("profile-address").textContent = user.address || "N/A";
+    document.getElementById("profile-emergency-contact-name").textContent = user.emergencyContact || "N/A";
+    document.getElementById("profile-emergency-phone").textContent = user.emergencyPhone || "N/A";
+    document.getElementById("profile-age").textContent = user.age || "N/A";
+    document.getElementById("profile-height").textContent = user.height || "N/A";
+    document.getElementById("profile-weight").textContent = user.weight || "N/A";
+
+  } catch (err) {
+    console.error("Could not load profile:", err);
+  }
+}
+
+// Load profile data when the page is fully loaded
+window.addEventListener("DOMContentLoaded", loadUserProfile);

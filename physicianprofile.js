@@ -23,7 +23,7 @@ if (!userId) {
       document.getElementById("doctor-office-phone").textContent = profile.officePhone;
       document.getElementById("doctor-office-address").textContent = profile.officeAddress;
       document.getElementById("profile-pic").src = profile.profileImage;
-      document.getElementById("profile-pic").src = profile.profileImage || "doctorimage1.jpg";
+      document.getElementById("profile-pic").src = profile.profileImage || "doctorimage1.jpeg";
 
 
       // Social links

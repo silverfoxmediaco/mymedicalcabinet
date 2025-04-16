@@ -54,26 +54,37 @@
                     <h2>Get Started</h2>
                     <form id="signup-form" class="account-form">
                         <div>
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                          <label for="name">Full Name</label>
+                          <input type="text" id="name" name="name" placeholder="Full Name" required>
                         </div>
-                        
+                      
                         <div>
-                            <label for="username">Username</label>
-                            <input type="text" id="username" name="username" placeholder="Username" required>
+                          <label for="username">Username</label>
+                          <input type="text" id="username" name="username" placeholder="Username" required>
                         </div>
-
+                      
                         <div>
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                          <label for="email">Email</label>
+                          <input type="email" id="email" name="email" placeholder="Enter Email" required>
                         </div>
+                      
                         <div>
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" required>
+                          <label for="password">Password</label>
+                          <input type="password" id="password" name="password" required>
                         </div>
+                      
+                        <div>
+                          <label for="role">Registering as:</label>
+                          <select id="role" name="role" required>
+                            <option value="" disabled selected>Select Role</option>
+                            <option value="patient">Patient/User</option>
+                            <option value="physician">Physician</option>
+                          </select>
+                        </div>
+                      
                         <button type="submit">Sign Up</button>
                         <p id="message" class="message"></p>
-                    </form>
+                      </form>
                 </div>
 
                 <div>

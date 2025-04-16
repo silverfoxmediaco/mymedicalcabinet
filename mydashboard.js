@@ -175,7 +175,7 @@ document.getElementById("medication-modal").addEventListener("click", (e) => {
 
 // FORM SUBMISSIONS
 
-// Medications form
+// Medications form event listener
 
 document.getElementById("medication-form").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -244,7 +244,7 @@ document.getElementById("medications-list").addEventListener("click", (e) => {
 
 //physicians edit handler
 
-//Physicians Form
+//Physicians Form event listener
 
 document.getElementById("physician-form").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -283,7 +283,7 @@ document.getElementById("physician-form").addEventListener("submit", async (e) =
   form.removeAttribute("data-editing-id");
 });
 
-// My Health Insurance
+// My Health Insurance event listener
 
 document.getElementById("health-insurance-form").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -324,6 +324,33 @@ document.getElementById("health-insurance-form").addEventListener("submit", asyn
   
     form.removeAttribute("data-editing-id");
   });
+
+  // My health history event listener
+  document.getElementById("history-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const type = document.getElementById("history-type").value;
+  const description = document.getElementById("history-description").value;
+  const date = document.getElementById("history-date").value;
+
+  try {
+    const res = await fetch(`${API_BASE}/api/health-history`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type, description, date })
+    });
+
+    if (res.ok) {
+      location.reload(); // Or call renderHistory(entry) manually
+    } else {
+      alert("Failed to save health history.");
+    }
+  } catch (err) {
+    console.error("Error saving health history:", err);
+    alert("An error occurred while saving.");
+  }
+});
+
 
   // Insurance List
   // Open Insurance edit Modal

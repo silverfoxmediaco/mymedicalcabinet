@@ -78,6 +78,36 @@
             <a id="social-instagram" href="#" target="_blank">Instagram</a>
             </div>
         </section>
+
+              <!-- Edit Physician Profile Modal -->
+        <div id="edit-physician-profile-modal" class="modal hidden">
+          <div class="modal-content">
+            <span id="close-edit-physician-profile-modal" class="close-btn" aria-label="Close">&times;</span>
+            <h3>Edit Physician Profile</h3>
+            <form id="edit-physician-profile-form">
+              <input type="text" id="edit-fullName" placeholder="Full Name" required />
+              <input type="email" id="edit-contactEmail" placeholder="Email" required />
+              <input type="tel" id="edit-mobilePhone" placeholder="Mobile Phone" />
+              <input type="tel" id="edit-officePhone" placeholder="Office Phone" />
+              <input type="text" id="edit-officeAddress" placeholder="Office Address" />
+              
+              <input type="text" id="edit-licenseNumber" placeholder="License Number" />
+              <input type="date" id="edit-licenseExpiration" placeholder="License Expiration" />
+              <input type="text" id="edit-hospital" placeholder="Hospital Affiliation" />
+              <input type="text" id="edit-medicalSchool" placeholder="Medical School" />
+              <input type="text" id="edit-specialty" placeholder="Specialty" />
+              <input type="number" id="edit-yearsInPractice" placeholder="Years in Practice" />
+        
+              <textarea id="edit-boardCertifications" placeholder="Board Certifications (comma-separated)"></textarea>
+              <textarea id="edit-accolades" placeholder="Accolades (comma-separated)"></textarea>
+              <textarea id="edit-penalties" placeholder="Penalties (comma-separated)"></textarea>
+        
+              <button type="submit">Save Changes</button>
+            </form>
+          </div>
+        </div>
+
+          
             <script src="physicianprofile.js"></script>
         </body>
 </html>

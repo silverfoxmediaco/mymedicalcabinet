@@ -10,7 +10,7 @@ function renderMedication(med) {
     <strong class="med-name-click" style="cursor:pointer">${med.name}</strong> (${med.dosage}) - ${med.frequency}<br>
     <small>Pharmacy: ${med.pharmacy || "N/A"}<br>${new Date(med.createdAt).toLocaleDateString()} — ${med.notes}</small><br>
     <button class="edit-med" data-id="${med._id}" aria-label="Edit">
-      <img src="edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Edit" width="20" height="20" />
+      <img src="pencilediticon.svg" alt="Edit" width="20" height="20" />
     </button>
     
 `;
@@ -30,7 +30,7 @@ function renderPhysician(doc) {
     <small>${doc.notes}</small><br>
 
     <button class="edit-physician" data-id="${doc._id}" aria-label="Edit">
-      <img src="edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Edit" width="20" height="20" />
+      <img src="pencilediticon.svg" alt="Edit" width="20" height="20" />
     </button>
 `;
   list.appendChild(li);
@@ -47,7 +47,7 @@ function renderInsurance(doc) {
       Address: ${doc.address || "N/A"}<br>
       ${doc.notes|| ""}<br>
       <button class="edit-insurance" data-id="${doc._id}" aria-label="Edit">
-        <img src="edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Edit" width="20" height="20" />
+        <img src="pencilediticon.svg" alt="Edit" width="20" height="20" />
       </button>
     `;
     list.appendChild(li);
@@ -61,7 +61,7 @@ function renderHistory(entry) {
     <strong>${entry.type}</strong> (${entry.date})<br>
     <small>${entry.description}</small><br>
     <button class="edit-history" data-id="${entry._id}" aria-label="Edit">
-      <img src="edit_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Edit" width="20" height="20" />
+      <img src="pencilediticon.svg" alt="Edit" width="20" height="20" />
     </button>
 `;
   list.appendChild(li);

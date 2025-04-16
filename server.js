@@ -16,7 +16,7 @@ const physicianRoutes = require("./routes/physicians");
 const insuranceRoutes = require("./routes/insurance");
 const healthHistoryRoutes = require("./routes/healthHistory");
 const profileRoutes = require("./routes/profile");
-const physicianProfileRoutes = require(".routes/physicianProfile");
+const physicianProfileRoutes = require("./routes/physicianProfile");
 
 const app = express(); 
 const PORT = 3000;

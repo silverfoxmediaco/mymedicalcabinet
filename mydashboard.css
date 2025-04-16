@@ -128,14 +128,14 @@ h2 {
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   gap: 2rem;
   margin-top: 2rem;
-  padding: 30px;
+  padding: 10px;
 }
 
 .data-entry-lists > div {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 10px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 

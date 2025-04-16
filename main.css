@@ -21,6 +21,18 @@
     justify-content: center;
     align-items: center;
   }
+
+    .homepagehero {
+    background: 
+      linear-gradient(rgba(41, 43, 44, 0.644), rgba(47, 51, 54, 0.687)),
+      url('nursesanddoctors.webp') no-repeat center center / cover;
+    color: white;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
 
 .hero-section h1 {
@@ -354,6 +366,18 @@ button:hover {
         justify-items: center;
         text-align: center;
     }
+
+    .homepagehero {
+    background: 
+      linear-gradient(rgba(41, 43, 44, 0.644), rgba(47, 51, 54, 0.687)),
+      url('nursesanddoctors.webp') no-repeat center center / cover;
+    color: white;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
     
     .hero-section h1 {
         font-size: 28px;

@@ -77,6 +77,26 @@
     background-color: #06D959;
 }
 
+select#role {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  appearance: none; /* for consistent styling */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+select#role:focus {
+  outline: none;
+  border-color: #017CFF;
+  box-shadow: 0 0 0 3px rgba(1, 124, 255, 0.2);
+}
+
+
 .message {
     font-size: 14px;
     margin-top: 15px;

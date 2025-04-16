@@ -379,13 +379,17 @@ nav a:hover {
 @media only screen and (max-width: 468px) {
 
     .grid-section1 {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        padding: 5px;
-        gap: 20px;
-        margin: 0;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    border: none;
+    background-color: #017CFF;
+    align-items: center;
+    height: 600px;
+    justify-content: center;
+    margin: 0;
+    
+}
 
     .grid-card1 {
         width: 90%;

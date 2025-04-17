@@ -94,7 +94,7 @@ nav a:hover {
   
   .physician-profile {
     max-width: 1100px;
-    margin: 0 auto;
+    margin-top: 40px;
     padding: 40px 20px;
     background-color: #fff;
     border-radius: 10px;

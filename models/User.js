@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
   password: String,
   isVerified: { type: Boolean, default: false },
   verificationToken: String,
+  role: { type: String, enum: ["patient", "physician"], default: "patient" },
   phone: String,
   address: String,
   age: Number,

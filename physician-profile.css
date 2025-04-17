@@ -93,12 +93,12 @@ nav a:hover {
 
 
     #edit-physician-profile-modal {
-        width: 80%;
+        width: 50%;
     }
 
   .physician-profile {
     max-width: 1100px;
-    margin-top: 40px;
+    margin: 40px auto;
     padding: 40px 20px;
     background-color: #fff;
     border-radius: 10px;

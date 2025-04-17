@@ -1,125 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physician Profile</title>
-    <link rel="stylesheet" href="physician-profile.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physician Profile</title>
+  <link rel="stylesheet" href="physician-profile.css" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header class="header-main">
+  <header class="header-main">
     <div class="grid-container">
       <div class="grid-logo">
-        <a href="home.html"><img class="logo" src="mymed100by50logo.png" alt="logo"></a>
+        <a href="home.html"><img class="logo" src="mymed100by50logo.png" alt="logo" /></a>
       </div>
       <div class="grid-burger">
-         <!-- Mobile Menu Start -->
-                  <nav>
-                    <ul class="sidebar">
-                        <li class="sidebar-close-btn">
-                          <a href="#"><img src="closeicon.svg" alt="close icon"></a>
-                        </li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="mydashboard.html">My Dashboard</a></li>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="become-a-member.html">Become a Member</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                    <ul class="nav-list">
-                        <li class="menu-button burger-menu-btn">
-                            <a href="#"><img src="menuicon.svg" alt=""></a>
-                        </li>
-                    </ul>
-                </nav>
-            <!-- Mobile Menu End -->
-        <section class="physician-profile">
-            <div class="profile-header">
-            <img id="profile-pic" src="doctorimage1.jpeg" alt="Doctor Profile Image" class="profile-image">
-            <div class="profile-info">
-                <h1 id="doctor-name">Dr. Full Name</h1>
-                <p><strong>Specialty:</strong> <span id="doctor-specialty"></span></p>
-                <p><strong>Hospital:</strong> <span id="doctor-hospital"></span></p>
-                <p><strong>Years in Practice:</strong> <span id="doctor-years"></span></p>
-            </div>
-            </div>
+        <!-- Mobile Menu Start -->
+        <nav>
+          <ul class="sidebar">
+            <li class="sidebar-close-btn">
+              <a href="#"><img src="closeicon.svg" alt="close icon" /></a>
+            </li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="mydashboard.html">My Dashboard</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="become-a-member.html">Become a Member</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <ul class="nav-list">
+            <li class="menu-button burger-menu-btn">
+              <a href="#"><img src="menuicon.svg" alt="menu icon" /></a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Mobile Menu End -->
+      </div>
+    </div>
+  </header>
 
-            <div class="profile-details">
-            <h2>Credentials</h2>
-            <p><strong>License #:</strong> <span id="doctor-license"></span></p>
-            <p><strong>Expires:</strong> <span id="doctor-expiration"></span></p>
-            <p><strong>Medical School:</strong> <span id="doctor-school"></span></p>
+  <!-- Physician Profile Section -->
+  <section class="physician-profile">
+    <div class="profile-header">
+      <img id="profile-pic" src="doctorimage1.jpeg" alt="Doctor Profile Image" class="profile-image" />
+      <div class="profile-info">
+        <h1 id="doctor-name">Dr. Full Name</h1>
+        <p><strong>Specialty:</strong> <span id="doctor-specialty"></span></p>
+        <p><strong>Hospital:</strong> <span id="doctor-hospital"></span></p>
+        <p><strong>Years in Practice:</strong> <span id="doctor-years"></span></p>
+      </div>
+    </div>
 
-            <h3>Board Certifications</h3>
-            <ul id="doctor-certifications"></ul>
+    <div class="profile-details">
+      <h2>Credentials</h2>
+      <p><strong>License #:</strong> <span id="doctor-license"></span></p>
+      <p><strong>Expires:</strong> <span id="doctor-expiration"></span></p>
+      <p><strong>Medical School:</strong> <span id="doctor-school"></span></p>
 
-            <h3>Awards & Accolades</h3>
-            <ul id="doctor-awards"></ul>
+      <h3>Board Certifications</h3>
+      <ul id="doctor-certifications"></ul>
 
-            <h3>State Fines or Penalties</h3>
-            <ul id="doctor-penalties"></ul>
-            </div>
+      <h3>Awards & Accolades</h3>
+      <ul id="doctor-awards"></ul>
 
-            <div class="profile-contact">
-            <h2>Contact Info</h2>
-            <p><strong>Email:</strong> <span id="doctor-email"></span></p>
-            <p><strong>Mobile:</strong> <span id="doctor-mobile"></span></p>
-            <p><strong>Office Phone:</strong> <span id="doctor-office-phone"></span></p>
-            <p><strong>Office Address:</strong> <span id="doctor-office-address"></span></p>
-            </div>
+      <h3>State Fines or Penalties</h3>
+      <ul id="doctor-penalties"></ul>
+    </div>
 
-            <div class="profile-social">
-            <h2>Connect with Me</h2>
-            <a id="social-linkedin" href="#" target="_blank">LinkedIn</a>
-            <a id="social-x" href="#" target="_blank">X</a>
-            <a id="social-instagram" href="#" target="_blank">Instagram</a>
-            </div>
-        </section>
+    <div class="profile-contact">
+      <h2>Contact Info</h2>
+      <p><strong>Email:</strong> <span id="doctor-email"></span></p>
+      <p><strong>Mobile:</strong> <span id="doctor-mobile"></span></p>
+      <p><strong>Office Phone:</strong> <span id="doctor-office-phone"></span></p>
+      <p><strong>Office Address:</strong> <span id="doctor-office-address"></span></p>
+    </div>
 
-              <!-- Edit Physician Profile Modal -->
-        <div id="edit-physician-profile-modal" class="modal hidden">
-          <div class="modal-content">
-            <span id="close-edit-physician-profile-modal" class="close-btn" aria-label="Close">&times;</span>
-            <h3>Edit Physician Profile</h3>
-            <form id="edit-physician-profile-form">
-              <input type="text" id="edit-fullName" placeholder="Full Name" required />
-              <input type="email" id="edit-contactEmail" placeholder="Email" required />
-              <input type="tel" id="edit-mobilePhone" placeholder="Mobile Phone" />
-              <input type="tel" id="edit-officePhone" placeholder="Office Phone" />
-              <input type="text" id="edit-officeAddress" placeholder="Office Address" />
-              
-              <input type="text" id="edit-licenseNumber" placeholder="License Number" />
-              <input type="date" id="edit-licenseExpiration" placeholder="License Expiration" />
-              <input type="text" id="edit-hospital" placeholder="Hospital Affiliation" />
-              <input type="text" id="edit-medicalSchool" placeholder="Medical School" />
-              <input type="text" id="edit-specialty" placeholder="Specialty" />
-              <input type="number" id="edit-yearsInPractice" placeholder="Years in Practice" />
-        
-              <textarea id="edit-boardCertifications" placeholder="Board Certifications (comma-separated)"></textarea>
-              <textarea id="edit-accolades" placeholder="Accolades (comma-separated)"></textarea>
-              <textarea id="edit-penalties" placeholder="Penalties (comma-separated)"></textarea>
-        
-              <button type="submit">Save Changes</button>
-            </form>
-          </div>
-        </div>
+    <div class="profile-social">
+      <h2>Connect with Me</h2>
+      <a id="social-linkedin" href="#" target="_blank">LinkedIn</a>
+      <a id="social-x" href="#" target="_blank">X</a>
+      <a id="social-instagram" href="#" target="_blank">Instagram</a>
+    </div>
+  </section>
 
-          <script>
-        function showSideBar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'flex';
-        }
+  <!-- Edit Physician Profile Modal -->
+  <div id="edit-physician-profile-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-edit-physician-profile-modal" class="close-btn" aria-label="Close">&times;</span>
+      <h3>Edit Physician Profile</h3>
+      <form id="edit-physician-profile-form">
+        <input type="text" id="edit-fullName" placeholder="Full Name" required />
+        <input type="email" id="edit-contactEmail" placeholder="Email" required />
+        <input type="tel" id="edit-mobilePhone" placeholder="Mobile Phone" />
+        <input type="tel" id="edit-officePhone" placeholder="Office Phone" />
+        <input type="text" id="edit-officeAddress" placeholder="Office Address" />
 
-        function hideSideBar() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.style.display = 'none';
-        }
-    </script>
-            <script src="physicianprofile.js"></script>
-        </body>
+        <input type="text" id="edit-licenseNumber" placeholder="License Number" />
+        <input type="date" id="edit-licenseExpiration" placeholder="License Expiration" />
+        <input type="text" id="edit-hospital" placeholder="Hospital Affiliation" />
+        <input type="text" id="edit-medicalSchool" placeholder="Medical School" />
+        <input type="text" id="edit-specialty" placeholder="Specialty" />
+        <input type="number" id="edit-yearsInPractice" placeholder="Years in Practice" />
+
+        <textarea id="edit-boardCertifications" placeholder="Board Certifications (comma-separated)"></textarea>
+        <textarea id="edit-accolades" placeholder="Accolades (comma-separated)"></textarea>
+        <textarea id="edit-penalties" placeholder="Penalties (comma-separated)"></textarea>
+
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showSideBar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.style.display = "flex";
+    }
+
+    function hideSideBar() {
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.style.display = "none";
+    }
+  </script>
+  <script src="physicianprofile.js"></script>
+</body>
 </html>

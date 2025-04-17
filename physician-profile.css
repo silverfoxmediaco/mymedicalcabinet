@@ -126,6 +126,7 @@ nav a:hover {
   border-radius: 10px;
   margin-left: 20px;
     margin-right: 20px;
+    margin-top: 8px;
 }
 
 .profile-edit-icon {
@@ -212,6 +213,7 @@ nav a:hover {
   
     .profile-info h1 {
       font-size: 22px;
+        margin-bottom: 10px;
     }
   
     .profile-image {

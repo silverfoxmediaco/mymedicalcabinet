@@ -14,8 +14,11 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {e
 
         const data = await res.json();
 
-        if (res.ok) {
-            window.location.href = "/mydashboard.html";
+       if (data.role === "physician") {
+        window.location.href = "/physician-profile.html";
+        } else {
+        window.location.href = "/mydashboard.html";
+    }
         } else {
             errorMsg.textContent = data.message || "Login failed.";
         }

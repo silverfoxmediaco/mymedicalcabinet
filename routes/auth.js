@@ -45,7 +45,7 @@ router.post("/signup", async (req, res) => {
 
     await user.save();
 
-    const verifyLink = `http://localhost:3000/verify?token=${token}`;
+    const verifyLink = `https://mymedicalcabinet.onrender.com/verify?token=${token}`;
 
     await transporter.sendMail({
       from: `"My Medical Cabinet" <no-reply@mymedicalcabinet.com>`,

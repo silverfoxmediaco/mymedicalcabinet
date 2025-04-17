@@ -125,6 +125,7 @@ nav a:hover {
   object-fit: cover;
   border-radius: 10px;
   margin-left: 20px;
+    margin-right: 20px;
 }
 
 .profile-edit-icon {
@@ -144,6 +145,7 @@ nav a:hover {
     font-size: 28px;
     color: #017CFF;
     margin: 0;
+      padding-left: 10px;
   }
   
   .profile-info p {
@@ -154,6 +156,7 @@ nav a:hover {
   .profile-contact,
   .profile-social {
     margin-top: 30px;
+      padding-left: 20px;
   }
   
   .profile-details h2,

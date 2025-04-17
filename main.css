@@ -372,7 +372,7 @@ button:hover {
       linear-gradient(rgba(41, 43, 44, 0.644), rgba(47, 51, 54, 0.687)),
       url('nursesanddoctors.webp') no-repeat center center / cover;
     color: white;
-    height: auto;
+    height: 300px;
     text-align: center;
     display: flex;
     justify-content: center;

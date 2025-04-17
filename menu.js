@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (link) {
         link.textContent = "Logout";
         link.href = "#";
+        link.classList.add("logout");
         link.addEventListener("click", async (e) => {
           e.preventDefault();
           const logoutRes = await fetch("/api/logout", {

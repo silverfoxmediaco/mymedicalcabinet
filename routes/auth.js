@@ -83,6 +83,19 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// LOGOUT
+router.post("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.error("Logout error:", err);
+      return res.status(500).json({ message: "Logout failed" });
+    }
+    res.clearCookie("connect.sid"); // clear session cookie
+    res.json({ message: "Logged out successfully" });
+  });
+});
+
+
 // EMAIL VERIFICATION
 router.get("/verify", async (req, res) => {
   const token = req.query.token;

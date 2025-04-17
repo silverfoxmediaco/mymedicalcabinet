@@ -357,7 +357,7 @@ button:hover {
         display: none;
     }
 
-    .hero {
+    /*.hero {
         width: 100%;
         background-color: #017CFF;
         color: white;
@@ -365,7 +365,7 @@ button:hover {
         align-content: center;
         justify-items: center;
         text-align: center;
-    }
+    }*/
 
     .homepagehero {
     background: 

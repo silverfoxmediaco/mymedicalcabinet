@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const PhysicianProfile = require("../models/PhysicianProfile");
+const User = require("../models/User");
+
 
 // POST: Create or update a physician profile
 router.post("/", async (req, res) => {

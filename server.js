@@ -21,9 +21,6 @@ const physicianProfileRoutes = require("./routes/physicianProfile");
 const app = express(); 
 const PORT = 3000;
 
-
-app.use("/api/physician-profile", physicianProfileRoutes);
-
 //core middlewares
 app.use(express.json());
 app.use(cors({
@@ -65,6 +62,7 @@ app.use("/api/medications", medicationRoutes);
 app.use("/api/physicians", physicianRoutes);
 app.use("/api/insurance", insuranceRoutes);
 app.use("/api/health-history", healthHistoryRoutes);
+app.use("/api/physician-profile", physicianProfileRoutes);
 
 //session check for dashboard access
 app.use((req, res, next) => {

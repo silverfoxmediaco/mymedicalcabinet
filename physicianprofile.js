@@ -121,5 +121,11 @@ if (form) {
       alert("An error occurred while saving.");
     }
   });
+
+  document.getElementById("edit-profile-icon")?.addEventListener("click", () => {
+    openEditPhysicianModal(userId);
+  }
+  );
+  
 }
 

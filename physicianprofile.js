@@ -41,32 +41,49 @@ if (!userId) {
 }
 
 // Open modal and populate with existing data
-async function openEditPhysicianModal(userId) {
-  try {
-    const res = await fetch(`/api/physician-profile/${userId}`);
-    const profile = await res.json();
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const userId = params.get("userId");
 
-    document.getElementById("edit-fullName").value = profile.fullName || "";
-    document.getElementById("edit-contactEmail").value = profile.contactEmail || "";
-    document.getElementById("edit-mobilePhone").value = profile.mobilePhone || "";
-    document.getElementById("edit-officePhone").value = profile.officePhone || "";
-    document.getElementById("edit-officeAddress").value = profile.officeAddress || "";
-    document.getElementById("edit-licenseNumber").value = profile.licenseNumber || "";
-    document.getElementById("edit-licenseExpiration").value = profile.licenseExpiration?.substring(0,10) || "";
-    document.getElementById("edit-hospital").value = profile.hospital || "";
-    document.getElementById("edit-medicalSchool").value = profile.medicalSchool || "";
-    document.getElementById("edit-specialty").value = profile.specialty || "";
-    document.getElementById("edit-yearsInPractice").value = profile.yearsInPractice || "";
-    document.getElementById("edit-boardCertifications").value = profile.boardCertifications?.join(", ") || "";
-    document.getElementById("edit-accolades").value = profile.accolades?.join(", ") || "";
-    document.getElementById("edit-penalties").value = profile.penalties?.join(", ") || "";
+  const editIcon = document.getElementById("edit-profile-icon");
 
-    document.getElementById("edit-physician-profile-modal").classList.remove("hidden");
-  } catch (err) {
-    alert("Could not load physician profile.");
-    console.error(err);
+  if (editIcon && userId) {
+    editIcon.addEventListener("click", async () => {
+      try {
+        const res = await fetch(`/api/physician-profile/${userId}`);
+        const profile = await res.json();
+
+        document.getElementById("edit-fullName").value = profile.fullName || "";
+        document.getElementById("edit-contactEmail").value = profile.contactEmail || "";
+        document.getElementById("edit-mobilePhone").value = profile.mobilePhone || "";
+        document.getElementById("edit-officePhone").value = profile.officePhone || "";
+        document.getElementById("edit-officeAddress").value = profile.officeAddress || "";
+        document.getElementById("edit-licenseNumber").value = profile.licenseNumber || "";
+        document.getElementById("edit-licenseExpiration").value = profile.licenseExpiration?.substring(0,10) || "";
+        document.getElementById("edit-hospital").value = profile.hospital || "";
+        document.getElementById("edit-medicalSchool").value = profile.medicalSchool || "";
+        document.getElementById("edit-specialty").value = profile.specialty || "";
+        document.getElementById("edit-yearsInPractice").value = profile.yearsInPractice || "";
+        document.getElementById("edit-boardCertifications").value = profile.boardCertifications?.join(", ") || "";
+        document.getElementById("edit-accolades").value = profile.accolades?.join(", ") || "";
+        document.getElementById("edit-penalties").value = profile.penalties?.join(", ") || "";
+
+        document.getElementById("edit-physician-profile-modal").classList.remove("hidden");
+      } catch (err) {
+        console.error("Could not load physician profile:", err);
+        alert("Failed to load profile.");
+      }
+    });
   }
-}
+
+  const closeBtn = document.getElementById("close-edit-physician-profile-modal");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      document.getElementById("edit-physician-profile-modal").classList.add("hidden");
+    });
+  }
+});
+
 
 // Close modal
 const closeBtn = document.getElementById("close-edit-physician-profile-modal");
@@ -125,6 +142,5 @@ if (form) {
     openEditPhysicianModal(userId);
   }
   );
-  
-}
 
+}

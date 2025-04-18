@@ -142,3 +142,106 @@ if (form) {
   });
 
 }
+
+// Open edit profile modal
+document.querySelector(".edit-profile-btn").addEventListener("click", async () => {
+  try {
+    const res = await fetch("/api/profile");
+    if (!res.ok) throw new Error("Failed to load profile");
+
+    const user = await res.json();
+
+    document.getElementById("edit-profile-name").value = user.name || "";
+    document.getElementById("edit-profile-email").value = user.email || "";
+    document.getElementById("edit-profile-phone").value = user.phone || "";
+    document.getElementById("edit-profile-address").value = user.address || "";
+    document.getElementById("edit-profile-age").value = user.age || "";
+    document.getElementById("edit-profile-height").value = user.height || "";
+    document.getElementById("edit-profile-weight").value = user.weight || "";
+    document.getElementById("edit-profile-emergency-contact").value = user.emergencyContact || "";
+    document.getElementById("edit-profile-emergency-phone").value = user.emergencyPhone || "";
+
+    document.getElementById("edit-profile-modal").classList.remove("hidden");
+  } catch (err) {
+    alert("Could not load profile data.");
+    console.error(err);
+  }
+});
+
+// Close profile modal on X click
+document.getElementById("close-edit-modal").addEventListener("click", () => {
+  document.getElementById("edit-profile-modal").classList.add("hidden");
+});
+
+// Save changes to profile
+document.getElementById("edit-profile-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const updatedProfile = {
+    name: document.getElementById("edit-profile-name").value,
+    email: document.getElementById("edit-profile-email").value,
+    phone: document.getElementById("edit-profile-phone").value,
+    address: document.getElementById("edit-profile-address").value,
+    age: document.getElementById("edit-profile-age").value,
+    height: document.getElementById("edit-profile-height").value,
+    weight: document.getElementById("edit-profile-weight").value,
+    emergencyContact: document.getElementById("edit-profile-emergency-contact").value,
+    emergencyPhone: document.getElementById("edit-profile-emergency-phone").value
+  };
+
+  try {
+    const res = await fetch("/api/profile", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updatedProfile)
+    });
+
+    if (res.ok) {
+      alert("Profile updated successfully!");
+      document.getElementById("edit-profile-modal").classList.add("hidden");
+      location.reload(); // Or manually update DOM fields
+    } else {
+      const err = await res.json();
+      alert(err.message || "Failed to update profile.");
+    }
+  } catch (err) {
+    console.error("Profile update error:", err);
+    alert("Something went wrong while saving.");
+  }
+});
+
+// Load and Display User Profile Data (Edit Modal + Dashboard)
+async function loadUserProfile() {
+  try {
+    const res = await fetch("https://mymedicalcabinet.onrender.com/api/profile");
+    if (!res.ok) throw new Error("Failed to load profile");
+    const user = await res.json();
+
+    // Populate Edit Modal Fields
+    document.getElementById("edit-profile-name").value = user.name || "";
+    document.getElementById("edit-profile-email").value = user.email || "";
+    document.getElementById("edit-profile-phone").value = user.phone || "";
+    document.getElementById("edit-profile-address").value = user.address || "";
+    document.getElementById("edit-profile-age").value = user.age || "";
+    document.getElementById("edit-profile-height").value = user.height || "";
+    document.getElementById("edit-profile-weight").value = user.weight || "";
+    document.getElementById("edit-profile-emergency-contact").value = user.emergencyContact || "";
+    document.getElementById("edit-profile-emergency-phone").value = user.emergencyPhone || "";
+
+    // Update Dashboard Profile View
+    document.getElementById("profile-name").textContent = user.name || "N/A";
+    document.getElementById("profile-email").textContent = user.email || "N/A";
+    document.getElementById("profile-phone").textContent = user.phone || "N/A";
+    document.getElementById("profile-address").textContent = user.address || "N/A";
+    document.getElementById("profile-emergency-contact-name").textContent = user.emergencyContact || "N/A";
+    document.getElementById("profile-emergency-phone").textContent = user.emergencyPhone || "N/A";
+    document.getElementById("profile-age").textContent = user.age || "N/A";
+    document.getElementById("profile-height").textContent = user.height || "N/A";
+    document.getElementById("profile-weight").textContent = user.weight || "N/A";
+  } catch (err) {
+    console.error("Could not load profile:", err);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", loadUserProfile);
+// Add event listener to the "Edit" button

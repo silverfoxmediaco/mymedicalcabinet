@@ -17,7 +17,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
 
     if (res.ok) {
       if (data.role === "physician") {
-        window.location.href = "/physician-profile.html";
+        window.location.href = `/physician-profile.html?userId=${data.userId}`;
       } else {
         window.location.href = "/mydashboard.html";
       }

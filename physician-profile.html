@@ -89,39 +89,48 @@
   </section>
 
   <!--User Profile Section Begins-->
-  <section class="user-profile">
-    <div class="welcome-message">
-      <h2 class="welcome-h2">Welcome, James</h2>
-    </div>
-    <div class="profile-row">
-      <button class="edit-profile-btn" aria-label="Edit Profile">
+  <section class="physician-profile">
+    <div class="physician-profile-row">
+      <button class="edit-physician-profile-btn" aria-label="Edit Physician Profile">
         <img src="images/pencilediticon.svg" alt="Edit" />
       </button>
-      <div class="profile-column">
-        <h3>Personal Info</h3>
-        <p><strong>Full Name:</strong> <span id="profile-name"></span></p>
-        <p><strong>Email:</strong> <span id="profile-email"></span></p>
+      <!--testing-->
+      <div class="profile-header">
+        <img id="profile-pic" src="doctorimage1.jpeg" alt="Doctor Profile Image" class="profile-image" />
+        <div class="profile-info">
+          
+          <div class="profile-edit-icon">
+              <img src="pencilediticon.svg" alt="Edit" id="edit-profile-icon" class="edit-icon"/>
+            </div>
+  
+      <div class="physician-profile-column">
+        <h3>Professional Info</h3>
+        <p><strong>Full Name:</strong> <span id="physician-profile-name"></span></p>
+        <p><strong>Specialty:</strong> <span id="physician-profile-specialty"></span></p>
+        <p><strong>Years in Practice:</strong> <span id="physician-profile-years"></span></p>
+        <p><strong>Hospital Affiliation:</strong> <span id="physician-profile-hospital"></span></p>
+        <p><strong>Medical School:</strong> <span id="physician-profile-medical-school"></span></p>
       </div>
   
-      <div class="profile-column">
-        <h3>Contact Details</h3>
-        <p><strong>Phone:</strong> <span id="profile-phone"></span></p>
-        <p><strong>Address:</strong> <span id="profile-address"></span></p>
-        <p><strong>Emergency Contact Name:</strong> <span id="profile-emergency-contact-name"></span> </p>
-        <p><strong>Emergency Contact Phone:</strong> <span id="profile-emergency-phone"></span></p>
+      <div class="physician-profile-column">
+        <h3>License & Certifications</h3>
+        <p><strong>License #:</strong> <span id="physician-profile-license"></span></p>
+        <p><strong>Expiration Date:</strong> <span id="physician-profile-expiration"></span></p>
+        <p><strong>Board Certifications:</strong> <span id="physician-profile-certifications"></span></p>
       </div>
   
-      <div class="profile-column">
-        <h3>Vitals</h3>
-        <p><strong>Age:</strong> <span id="profile-age"></span></p>
-        <p><strong>Height:</strong> <span id="profile-height"></span></p>
-        <p><strong>Weight:</strong> <span id="profile-weight"></span></p>
-        
+      <div class="physician-profile-column">
+        <h3>Contact Info</h3>
+        <p><strong>Email:</strong> <span id="physician-profile-email"></span></p>
+        <p><strong>Mobile:</strong> <span id="physician-profile-mobile"></span></p>
+        <p><strong>Office Phone:</strong> <span id="physician-profile-office-phone"></span></p>
+        <p><strong>Office Address:</strong> <span id="physician-profile-office-address"></span></p>
       </div>
-  
     </div>
   </section>
 <!--User Profile Section Ends-->
+
+  
 
   <!-- Edit Physician Profile Modal -->
   <div id="edit-physician-profile-modal" class="modal hidden">

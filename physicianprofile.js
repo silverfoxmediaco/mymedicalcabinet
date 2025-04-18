@@ -1,4 +1,3 @@
-// Assumes the URL includes a userId like: ?userId=abcdef123456
 const params = new URLSearchParams(window.location.search);
 const userId = params.get("userId");
 
@@ -139,8 +138,7 @@ if (form) {
   });
 
   document.getElementById("edit-profile-icon")?.addEventListener("click", () => {
-    openEditPhysicianModal(userId);
-  }
-  );
+    
+  });
 
 }

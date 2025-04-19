@@ -112,11 +112,12 @@ display: flex;
 align-items: flex-start;
 justify-content: space-between;
 padding: 20px;
-border-bottom: 1px solid #ccc;
+
 }
 
 .profile-info {
 flex: 1;
+margin-left: 20px;
 }
 
 .profile-image {
@@ -124,9 +125,15 @@ width: 200px;
 height: 200px;
 object-fit: cover;
 border-radius: 10px;
-margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image2 {
+width: 200px;
+height: 200px;
+object-fit: cover;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-edit-icon {
@@ -157,6 +164,12 @@ cursor: pointer;
   margin: 5px 0;
 }
 
+.credentials,
+.contactinfo,
+.connectwithme {
+  padding: 0;
+}
+
 .profile-details,
 .profile-contact,
 .profile-social {
@@ -170,6 +183,7 @@ cursor: pointer;
   color: #017CFF;
   font-size: 22px;
   margin-bottom: 10px;
+  
 }
 
 .profile-details ul,
